@@ -1,12 +1,13 @@
 com\sg\foundations\flowcontrol\random\GuessMeMore.class
 com\sg\foundations\basics\ProjectGutenberg.class
 com\sg\foundations\scanner\QuestForTheUserInput.class
+com\sg\foundations\flowcontrol\ifs\MiniZork.class
+com\sg\foundations\variables\InABucket.class
 com\sg\foundations\basics\AllTheMaths.class
 com\sg\foundations\flowcontrol\random\ALittleChaos.class
 com\sg\foundations\variables\BestAdderEver.class
-com\sg\foundations\flowcontrol\ifs\MiniZork.class
 com\sg\foundations\flowcontrol\ifs\LlamasWhalesAndDodosOhMy.class
 com\sg\foundations\basics\ABeginning.class
 com\sg\foundations\scanner\MiniMadLibs.class
 com\sg\foundations\scanner\DontForgetToStoreIt.class
-com\sg\foundations\variables\InABucket.class
+com\sg\foundations\flowcontrol\whiles\WaitAWhile.class
