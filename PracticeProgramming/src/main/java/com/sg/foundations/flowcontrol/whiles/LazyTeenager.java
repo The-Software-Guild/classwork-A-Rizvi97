@@ -21,7 +21,7 @@ public class LazyTeenager {
             prob +=1;
             int num = randomiser.nextInt(10); 
             System.out.println("Clean your Room!!");
-            System.out.println(num);
+            //System.out.println(num);
             if (num <= prob) {
                 System.out.println("Fine! Ill clean my room but I refuse eat my peas!");
                 willdo = true;               
