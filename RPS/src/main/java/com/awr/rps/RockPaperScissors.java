@@ -13,64 +13,58 @@ public class RockPaperScissors {
     
     public static void main(String[] args) {
         
-        //Random randomiser = new Random();
+        // Initialise Scanner and variables
         Scanner input = new Scanner(System.in);
         int rounds;
-        String choice;
-        boolean play = true;
-//        int compcount = 0;
-//        int usercount = 0;
-//        int tiecount = 0;     
-        
-        while (play){
-            
-            
-            System.out.println("How many round between 1 and 10");
+        String choice; 
+        // Use a while loop if user wants to play again
+        while (true){
+            // Prompt for user input
+            System.out.println("How many rounds would you like to play?");
+            System.out.println("Choose between 1 and 10");
             rounds = Integer.parseInt(input.nextLine());
-
-
+            // Print error and exit if out side range
             if (rounds > 10 || rounds < 0){
-                System.out.println("Goodbye");
+                System.out.println("Error, Outside range");
                 System.exit(0);
             }
-            System.out.println("lets play " + rounds + " rounds");
-
-
-            playRPS1(rounds);
             
-            System.out.println("Do you want to play?");
+            System.out.println("lets play " + rounds + " rounds");
+            // Use method containing the game to play set amount of rounds
+            playRPS1(rounds);
+            // Prompt the user if they want to play again
+            System.out.println("Do you want to play again?");
             System.out.println("(y)es or (n)o");
             choice = input.nextLine();
-            
+            // break the loop if player does not want to play, this will exit the programme
             if (choice .equals("n")){
-                play = false;
                 break;
             }
             
         }
-//        
+        
     }
+    // Method for the game involving parameter
     public static void playRPS1(int rounds){
-    
+        // Initialise scanner, random and variables.
         Scanner input = new Scanner(System.in);
         Random randomiser = new Random();
-        
+        // Variables to track number of userwins, computerwins and ties
         int uwin = 0;
         int cwin = 0;
         int ties = 0;
-    
+        // for loop to play number of rounds picked by user
         for (int i=0; i<rounds; i++){
-            //playRPS();
-            
+            // initialise user and computer move variables
             int usermove;
             int compmove;
-            
+            // prompt user for their move
             System.out.println("What is your move?");
             System.out.println("Enter 1 for rock, 2 for paper or 3 for scissors");
             usermove = Integer.parseInt(input.nextLine());
-
+            // generate random move to be played by the computer
             compmove = randomiser.nextInt(3)+1;
-
+            // if else if statements to determine winner and track score
             if (compmove == usermove){
                 ties += 1;
                 System.out.println( "Tied");
@@ -94,7 +88,7 @@ public class RockPaperScissors {
                 System.out.println( "User Wins");
             }
             System.out.println(uwin + " " + cwin + " " + ties);              
-            
+            //if else if statements to determine overall winner
             if (ties >= cwin && ties >= uwin){
                 System.out.println("It's a tie");
             } else if (cwin >= ties && cwin >= uwin){
@@ -104,8 +98,6 @@ public class RockPaperScissors {
             }
             
         }
-    
-        
        
     }
     
